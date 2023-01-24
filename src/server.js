@@ -3,6 +3,7 @@ const express = require("express");
 const { connecToDatabase } = require("./db");
 const { registerRoutes } = require("./routes");
 const cors = require("cors");
+const { config } = require("./config");
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(cors());
 // Router
 registerRoutes(app);
 
-const PORT = 3000;
+const PORT = config.port;
 
 app.listen(PORT, async () => {
   console.log(`The app is listening on http://localhost:${PORT}`);

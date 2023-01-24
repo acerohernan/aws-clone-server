@@ -14,7 +14,7 @@ app.use(cors());
 // Router
 registerRoutes(app);
 
-const PORT = 80;
+const PORT = 3000;
 
 app.listen(PORT, async () => {
   console.log(`The app is listening on http://localhost:${PORT}`);
